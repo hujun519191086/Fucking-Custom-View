@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomTextView">
+        <!--文字-->
+        <attr name="cusText" format="string"></attr>
+        <!--文字颜色-->
+        <attr name="cusTextColor" format="color"></attr>
+        <!--文字大小-->
+        <attr name="cusTextSize" format="dimension"></attr>
+    </declare-styleable>
+</resources>
