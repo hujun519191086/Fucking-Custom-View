@@ -108,7 +108,9 @@ public class CustomTextView extends View {
         //需要计算基线 baseline 位置
         //获取
         Paint.FontMetricsInt fontMetricsInt = mPaint.getFontMetricsInt();
-        int y = (fontMetricsInt.top - fontMetricsInt.bottom) / 2 - fontMetricsInt.top;
+        //(fontMetricsInt.bottom - fontMetricsInt.top)/2 - fontMetricsInt.bottom
+        //(fontMetricsInt.top - fontMetricsInt.bottom) / 2 - fontMetricsInt.top
+        int y = (fontMetricsInt.bottom - fontMetricsInt.top)/2 - fontMetricsInt.bottom;
         int baseline = getHeight() / 2 + y;
         canvas.drawText(mText, x, baseline, mPaint);
     }
