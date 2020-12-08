@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <declare-styleable name="CustomTextView">
         <!--文字-->
         <attr name="cusText" format="string"></attr>
@@ -8,4 +9,21 @@
         <!--文字大小-->
         <attr name="cusTextSize" format="dimension"></attr>
     </declare-styleable>
+
+
+    <declare-styleable name="ArcView">
+        <!--内环颜色-->
+        <attr name="arcInnerColor" format="color"/>
+        <!--外环颜色-->
+        <attr name="arcOutColor" format="color"/>
+        <!--环大小-->
+        <attr name="arcWidth" format="dimension"/>
+        <!--文字-->
+        <attr name="arcText" format="string"/>
+        <!--文字大小-->
+        <attr name="arcTextSize" format="dimension"/>
+        <!--文字颜色-->
+        <attr name="arcTextColor" format="color"/>
+    </declare-styleable>
+
 </resources>
