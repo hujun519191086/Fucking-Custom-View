@@ -5,9 +5,9 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -54,6 +54,7 @@ public class ArcView extends View {
         initAttr(context, attrs);
         initInnerPaint();
         initOutPaint();
+        initTextPaint();
     }
 
     private void initAttr(Context context, AttributeSet attrs) {
@@ -105,6 +106,16 @@ public class ArcView extends View {
         mOutPaint.setStrokeCap(Paint.Cap.ROUND);
     }
 
+    private void initTextPaint() {
+        mTextPaint = new Paint();
+        //抗锯齿
+        mTextPaint.setAntiAlias(true);
+        //文字大小
+        mTextPaint.setTextSize(mTextSize);
+        //文字颜色
+        mTextPaint.setColor(mTextColor);
+    }
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -128,6 +139,15 @@ public class ArcView extends View {
         float sweepAngle = (float) CurrentProgress / MaxProgress;
         canvas.drawArc(rectF, 135, sweepAngle * 270, false, mOutPaint);
         //画文字
+        //测量文字宽度
+        Rect rect = new Rect();
+        mTextPaint.getTextBounds(mText, 0, mText.length(), rect);
+        int x = getWidth() / 2 - rect.width() / 2;
+        //基线
+        Paint.FontMetricsInt fontMetricsInt = mTextPaint.getFontMetricsInt();
+        int y = (fontMetricsInt.bottom - fontMetricsInt.top) / 2 - fontMetricsInt.bottom;
+        int baseline = getHeight() / 2 + y;
+        canvas.drawText(mText, x, baseline, mTextPaint);
     }
 
     //设置最大进度

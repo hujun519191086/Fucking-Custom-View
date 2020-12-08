@@ -19,7 +19,7 @@
             app:arcWidth="20dp"
             app:arcText="1999"
             app:arcTextSize="20sp"
-            app:arcTextColor="@color/black"
+            app:arcTextColor="@color/purple_700"
             />
 
     </LinearLayout>

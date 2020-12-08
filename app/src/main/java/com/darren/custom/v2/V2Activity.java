@@ -1,5 +1,7 @@
 package com.darren.custom.v2;
 
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -29,9 +31,17 @@ public class V2Activity extends AppCompatActivity {
     }
 
     private void initView() {
-        v2Binding.arcView
-                .setCurrentProgress(80)
-                .setMaxProgress(100);
+        v2Binding.arcView.setMaxProgress(100);
+        ValueAnimator valueAnimator = ObjectAnimator.ofInt(0,80);
+        valueAnimator.setDuration(2000);
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                int progress = (int)animation.getAnimatedValue();
+                v2Binding.arcView.setCurrentProgress(progress);
+            }
+        });
+        valueAnimator.start();
     }
 
 }
