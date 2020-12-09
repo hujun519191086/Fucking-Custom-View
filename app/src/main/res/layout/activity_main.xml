@@ -25,5 +25,12 @@
             android:text="@string/arc_view"
             />
 
+        <Button
+            android:id="@+id/btn_track_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/track_view"
+            />
+
     </LinearLayout>
 </layout>

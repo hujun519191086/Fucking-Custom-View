@@ -5,11 +5,13 @@ import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.darren.custom.databinding.ActivityMainBinding;
 import com.darren.custom.v1.V1Activity;
 import com.darren.custom.v2.V2Activity;
+import com.darren.custom.v3.V3Activity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initClick(){
         mainBinding.btnCustomView.setOnClickListener(this);
         mainBinding.btnArcView.setOnClickListener(this);
+        mainBinding.btnTrackView.setOnClickListener(this);
     }
 
     @Override
@@ -41,6 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_arc_view:
                 intent = new Intent(this, V2Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_track_view:
+                intent = new Intent(this, V3Activity.class);
                 startActivity(intent);
                 break;
         }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.darren.custom.v3.TrackView
+            android:id="@+id/track_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="darrenhang"
+            android:textSize="20sp"
+            app:changeColor="@color/purple_200"
+            app:originColor="@color/black" />
+
+        <Button
+            android:id="@+id/btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LEFT" />
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RIIGHT" />
+
+
+    </LinearLayout>
+</layout>

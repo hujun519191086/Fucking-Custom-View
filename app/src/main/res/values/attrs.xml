@@ -26,4 +26,13 @@
         <attr name="arcTextColor" format="color"/>
     </declare-styleable>
 
+
+    <declare-styleable name="TrackView">
+        <!--默认颜色-->
+        <attr name="originColor" format="color"/>
+        <!--改变颜色-->
+        <attr name="changeColor" format="color"/>
+    </declare-styleable>
+
+
 </resources>
