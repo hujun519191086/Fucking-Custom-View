@@ -5,7 +5,6 @@ import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.darren.custom.databinding.ActivityMainBinding;
@@ -24,11 +23,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initClick();
     }
 
-    private void initBinding(){
-        mainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+    private void initBinding() {
+        mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
     }
 
-    private void initClick(){
+    private void initClick() {
         mainBinding.btnCustomView.setOnClickListener(this);
         mainBinding.btnArcView.setOnClickListener(this);
         mainBinding.btnTrackView.setOnClickListener(this);
@@ -37,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         Intent intent;
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_custom_view:
                 intent = new Intent(this, V1Activity.class);
                 startActivity(intent);

@@ -24,6 +24,7 @@ public class TrackView extends TextView {
     private float CurrentProgress = 0.0f;
     private Direction direction = Direction.LEFT_TO_RIGHT;
 
+
     public enum Direction {
         LEFT_TO_RIGHT,
         RIGHT_TO_LEFT
@@ -67,9 +68,13 @@ public class TrackView extends TextView {
         return paint;
     }
 
+    /**
+     * 因为重写，所以一定要注释掉 super 方法
+     * @param canvas
+     */
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+        //super.onDraw(canvas);
         int middle = (int) (CurrentProgress * getWidth());
         if (direction == Direction.LEFT_TO_RIGHT) {
             drawText(canvas, mChangePaint, 0, middle);
@@ -102,6 +107,10 @@ public class TrackView extends TextView {
     public void setCurrentProgress(float progress) {
         this.CurrentProgress = progress;
         invalidate();
+    }
+
+    public void setChangeColor(int red) {
+        this.mChangePaint.setColor(red);
     }
 
 
