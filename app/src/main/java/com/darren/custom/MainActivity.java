@@ -12,6 +12,7 @@ import com.darren.custom.v1.V1Activity;
 import com.darren.custom.v2.V2Activity;
 import com.darren.custom.v3.V3Activity;
 import com.darren.custom.v4.V4Activity;
+import com.darren.custom.v5.V5Activity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainBinding.btnArcView.setOnClickListener(this);
         mainBinding.btnTrackView.setOnClickListener(this);
         mainBinding.btnProgressView.setOnClickListener(this);
+        mainBinding.shapeView.setOnClickListener(this);
     }
 
     @Override
@@ -53,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_progress_view:
                 intent = new Intent(this, V4Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.shape_view:
+                intent = new Intent(this, V5Activity.class);
                 startActivity(intent);
                 break;
         }

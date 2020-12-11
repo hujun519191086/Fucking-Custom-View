@@ -48,5 +48,14 @@
         <attr name="progressTextColor" format="color"></attr>
     </declare-styleable>
 
+    <declare-styleable name="ShapeView">
+        <!--圆颜色-->
+        <attr name="circleColor" format="color"/>
+        <!--正方形颜色-->
+        <attr name="squareColor" format="color"/>
+        <!--三角形颜色-->
+        <attr name="triangleColor" format="color"/>
+
+    </declare-styleable>
 
 </resources>

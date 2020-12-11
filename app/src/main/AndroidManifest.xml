@@ -17,10 +17,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".v1.V1Activity"/>
-        <activity android:name=".v2.V2Activity"/>
-        <activity android:name=".v3.V3Activity"/>
-        <activity android:name=".v4.V4Activity"/>
+        <activity android:name=".v1.V1Activity" />
+        <activity android:name=".v2.V2Activity" />
+        <activity android:name=".v3.V3Activity" />
+        <activity android:name=".v4.V4Activity" />
+        <activity android:name=".v5.V5Activity" />
 
     </application>
 
