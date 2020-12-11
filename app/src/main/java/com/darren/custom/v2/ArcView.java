@@ -34,10 +34,12 @@ public class ArcView extends View {
     //文字默认颜色
     private int mTextColor = Color.BLACK;
 
+    //画笔
     private Paint mInnerPaint;
     private Paint mOutPaint;
     private Paint mTextPaint;
 
+    //进度
     private int MaxProgress;
     private int CurrentProgress;
 
@@ -51,17 +53,21 @@ public class ArcView extends View {
 
     public ArcView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        //初始化资源
         initAttr(context, attrs);
+        //初始化内环 Paint
         initInnerPaint();
+        //初始化外环 Paint
         initOutPaint();
+        //初始化文字 Paint
         initTextPaint();
     }
 
     private void initAttr(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ArcView);
-        //外环颜色
-        mInnerColor = array.getColor(R.styleable.ArcView_arcInnerColor, mInnerColor);
         //内环颜色
+        mInnerColor = array.getColor(R.styleable.ArcView_arcInnerColor, mInnerColor);
+        //外环颜色
         mOutColor = array.getColor(R.styleable.ArcView_arcOutColor, mOutColor);
         //环大小
         mWidth = (int) array.getDimension(R.styleable.ArcView_arcWidth, mWidth);

@@ -18,10 +18,13 @@ import com.darren.custom.R;
  * author  DarrenHang
  */
 public class CustomTextView extends View {
+    //文本
     private String mText;
+    //文字颜色
     private int mTextColor = Color.BLACK;
+    //文字大小
     private int mTextSize;
-
+    //画笔
     private Paint mPaint;
 
     //在初始化时调用
@@ -41,7 +44,7 @@ public class CustomTextView extends View {
          * 第一步获取属性
          */
         initAttr(context, attrs);
-
+        //初始化 Paint
         initPaint();
     }
 

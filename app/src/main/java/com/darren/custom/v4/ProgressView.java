@@ -5,10 +5,8 @@ import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -21,17 +19,23 @@ import com.darren.custom.R;
  */
 public class ProgressView extends View {
 
+    //环颜色
     private int mInnerColor = Color.BLACK;
     private int mOutColor = Color.BLUE;
+    //大小
     private int mWidth = 10;
 
+    //文字大小
     private int mTextSize = 15;
+    //文字颜色
     private int mTextColor = Color.BLACK;
 
+    //画笔
     private Paint mInnerPaint;
     private Paint mOutPaint;
     private Paint mTextPaint;
 
+    //进度
     private int CurrentProgress = 0;
     private int MaxProgress = 100;
 
@@ -47,8 +51,11 @@ public class ProgressView extends View {
     public ProgressView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initAttr(context, attrs);
+        //初始化内圆 Paint
         initInnerPaint();
+        //初始化外圆 Paint
         initOutPaint();
+        //初始化文字 Paint
         initTextPaint();
     }
 
@@ -111,8 +118,11 @@ public class ProgressView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        //宽
         int width = MeasureSpec.getSize(widthMeasureSpec);
+        //高
         int height = MeasureSpec.getSize(heightMeasureSpec);
+        //设置宽高
         setMeasuredDimension(Math.min(width, height), Math.min(width, height));
     }
 
@@ -135,11 +145,13 @@ public class ProgressView extends View {
         canvas.drawText(text, getWidth() / 2 - textWidth / 2, getHeight() / 2 + y, mTextPaint);
     }
 
+    //设置当前进度
     public void setCurrentProgress(int currentProgress) {
         CurrentProgress = currentProgress;
         invalidate();
     }
 
+    //设置最大进度
     public void setMaxProgress(int maxProgress) {
         MaxProgress = maxProgress;
     }

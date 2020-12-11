@@ -17,11 +17,13 @@ import com.darren.custom.R;
  * author  DarrenHang
  */
 public class TrackView extends TextView {
-
+    //画笔
     private Paint mOriginPaint;
     private Paint mChangePaint;
 
+    //进度
     private float CurrentProgress = 0.0f;
+    //方向
     private Direction direction = Direction.LEFT_TO_RIGHT;
 
 
@@ -40,6 +42,7 @@ public class TrackView extends TextView {
 
     public TrackView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        //初始化资源
         initAttr(context, attrs);
     }
 
@@ -54,6 +57,7 @@ public class TrackView extends TextView {
         mOriginPaint = getPaintByColor(originColor);
         mChangePaint = getPaintByColor(changeColor);
     }
+
 
     private Paint getPaintByColor(int color) {
         Paint paint = new Paint();
@@ -100,15 +104,18 @@ public class TrackView extends TextView {
         canvas.restore();
     }
 
+    //设置方向
     public void setDirection(Direction dic) {
         this.direction = dic;
     }
 
+    //设置最大进度
     public void setCurrentProgress(float progress) {
         this.CurrentProgress = progress;
         invalidate();
     }
 
+    //设置改变颜色
     public void setChangeColor(int red) {
         this.mChangePaint.setColor(red);
     }

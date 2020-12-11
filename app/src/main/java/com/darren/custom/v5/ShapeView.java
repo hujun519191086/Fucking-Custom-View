@@ -19,10 +19,11 @@ import com.darren.custom.R;
  */
 
 public class ShapeView extends View {
-
+    //画笔
     private Paint mCirclePaint,mSquarePaint,mTrianglePaint;
+    //默认图形
     private Shape mShape = Shape.CIRCLE;
-
+    //颜色
     private int circleColor = Color.YELLOW;
     private int squareColor = Color.BLUE;
     private int triangleColor = Color.GREEN;
