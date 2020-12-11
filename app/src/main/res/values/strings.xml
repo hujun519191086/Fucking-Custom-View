@@ -4,4 +4,6 @@
     <string name="custom_view">自定义View基本流程</string>
     <string name="arc_view">自定义圆弧</string>
     <string name="track_view">自定义变色文字</string>
+    <string name="progress_view">自定义进度条</string>
+
 </resources>

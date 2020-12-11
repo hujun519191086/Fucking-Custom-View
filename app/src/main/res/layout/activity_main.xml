@@ -32,5 +32,12 @@
             android:text="@string/track_view"
             />
 
+        <Button
+            android:id="@+id/btn_progress_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/progress_view"
+            />
+
     </LinearLayout>
 </layout>
