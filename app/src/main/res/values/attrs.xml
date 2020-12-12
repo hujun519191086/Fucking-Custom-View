@@ -58,4 +58,15 @@
 
     </declare-styleable>
 
+    <declare-styleable name="StarView">
+        <!--默认图片-->
+        <attr name="normal" format="reference"/>
+        <!--选中图片-->
+        <attr name="focus" format="reference"/>
+        <!--数量-->
+        <attr name="starNumber" format="integer"/>
+        <!--间隔-->
+        <attr name="starPadding" format="dimension"/>
+    </declare-styleable>
+
 </resources>

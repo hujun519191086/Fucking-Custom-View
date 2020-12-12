@@ -6,5 +6,6 @@
     <string name="track_view">自定义变色文字</string>
     <string name="progress_view">自定义进度条</string>
     <string name="shape_view">仿58加载</string>
+    <string name="star_view">自定义评分</string>
 
 </resources>
