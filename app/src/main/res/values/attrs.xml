@@ -69,4 +69,13 @@
         <attr name="starPadding" format="dimension"/>
     </declare-styleable>
 
+    <declare-styleable name="LetterSideView">
+        <!--默认颜色-->
+        <attr name="normalColor" format="color"/>
+        <!--选中颜色-->
+        <attr name="focusColor" format="color"/>
+        <!--文字大小-->
+        <attr name="letterSize" format="dimension"/>
+    </declare-styleable>
+
 </resources>

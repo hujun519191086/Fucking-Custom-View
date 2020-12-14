@@ -7,5 +7,6 @@
     <string name="progress_view">自定义进度条</string>
     <string name="shape_view">仿58加载</string>
     <string name="star_view">自定义评分</string>
+    <string name="letter_side_view">自定义字母选择</string>
 
 </resources>

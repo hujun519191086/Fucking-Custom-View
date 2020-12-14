@@ -23,6 +23,7 @@
         <activity android:name=".v4.V4Activity" />
         <activity android:name=".v5.V5Activity" />
         <activity android:name=".v6.V6Activity"/>
+        <activity android:name=".v7.V7Activity"/>
 
     </application>
 
