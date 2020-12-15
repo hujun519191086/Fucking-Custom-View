@@ -50,9 +50,14 @@ public class ShapeView extends View {
 
     private void initAttr(Context context, AttributeSet attrs){
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ShapeView);
+        //圆颜色
         circleColor = array.getColor(R.styleable.ShapeView_circleColor,circleColor);
+        //正方形颜色
         squareColor = array.getColor(R.styleable.ShapeView_circleColor,squareColor);
+        //三角形颜色
         triangleColor = array.getColor(R.styleable.ShapeView_circleColor,triangleColor);
+        //回收
+        array.recycle();
     }
 
     private void initCirclePaint(){

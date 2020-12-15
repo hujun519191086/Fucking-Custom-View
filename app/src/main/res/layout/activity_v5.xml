@@ -15,7 +15,8 @@
         <com.darren.custom.v5.ShapeView
             android:id="@+id/shape_view"
             android:layout_width="30dp"
-            android:layout_height="30dp" />
+            android:layout_height="30dp"
+            />
 
         <Button
             android:id="@+id/btn_change"

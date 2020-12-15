@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 
 import com.darren.custom.databinding.ActivityMainBinding;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initBinding() {
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        LayoutInflater.from(this).inflate(R.layout.activity_main,null,false);
     }
 
     private void initClick() {
