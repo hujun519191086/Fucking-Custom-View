@@ -60,7 +60,7 @@ public class LetterSideView extends View {
         mNormalColor = array.getColor(R.styleable.LetterSideView_normalColor, mNormalColor);
         //选中颜色
         mFocusColor = array.getColor(R.styleable.LetterSideView_focusColor, mFocusColor);
-        //文字颜色
+        //文字大小
         mTextSize = array.getDimensionPixelSize(R.styleable.LetterSideView_letterSize, sp2px(mTextSize));
         //回收
         array.recycle();
