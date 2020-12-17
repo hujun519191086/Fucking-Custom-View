@@ -16,6 +16,7 @@ import com.darren.custom.v4.V4Activity;
 import com.darren.custom.v5.V5Activity;
 import com.darren.custom.v6.V6Activity;
 import com.darren.custom.v7.V7Activity;
+import com.darren.custom.v8.V8Activity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainBinding.shapeView.setOnClickListener(this);
         mainBinding.starView.setOnClickListener(this);
         mainBinding.letterSideView.setOnClickListener(this);
+        mainBinding.inflateTest.setOnClickListener(this);
     }
 
     @Override
@@ -73,6 +75,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.letter_side_view:
                 intent = new Intent(this, V7Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.inflate_test:
+                intent = new Intent(this, V8Activity.class);
                 startActivity(intent);
                 break;
         }
