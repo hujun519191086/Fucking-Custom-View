@@ -17,6 +17,8 @@ public class TagLayout extends ViewGroup {
 
     private List<List<View>> mChildViews = new ArrayList<>();
 
+    private TagAdapter mAdapter;
+
     public TagLayout(Context context) {
         this(context, null);
     }
@@ -54,17 +56,21 @@ public class TagLayout extends ViewGroup {
             measureChild(childView, widthMeasureSpec, heightMeasureSpec);
             //获取子View的 margin
             MarginLayoutParams params = (MarginLayoutParams) childView.getLayoutParams();
+            //子View占据的宽度
+            int childWidth = childView.getMeasuredWidth() + params.leftMargin + params.rightMargin;
+            //子View占据的高度
+            int childHeight = childView.getMeasuredHeight() + params.topMargin + params.bottomMargin;
             //根据子View的宽度来处理换行
-            if (lineWidth + (childView.getMeasuredWidth() + params.leftMargin + params.rightMargin) > width) {
+            if (lineWidth + childWidth > width) {
                 //换行
                 height += maxHeight;
-                lineWidth = childView.getMeasuredWidth() + params.leftMargin + params.rightMargin;
+                lineWidth = childWidth;
                 childViews = new ArrayList<>();
                 mChildViews.add(childViews);
             } else {
                 //累加宽度
-                lineWidth += childView.getMeasuredWidth() + params.leftMargin + params.rightMargin;
-                maxHeight = Math.max(childView.getMeasuredHeight() + params.topMargin + params.bottomMargin, maxHeight);
+                lineWidth += childWidth;
+                maxHeight = Math.max(childHeight, maxHeight);
             }
             childViews.add(childView);
 
@@ -92,7 +98,7 @@ public class TagLayout extends ViewGroup {
                 int childTop = top + params.topMargin;
                 right = left + childView.getMeasuredWidth();
                 bottom = childTop + childView.getMeasuredHeight();
-                Log.d("TAG", "left -> " + left + " top ->" + top + "right -> " + right + " bottom ->" + bottom);
+                Log.d("TAG", "left -> " + left + " top ->" + top + " right -> " + right + " bottom ->" + bottom);
                 //摆放
                 childView.layout(left, childTop, right, bottom);
                 left += childView.getMeasuredWidth() + params.rightMargin;
@@ -106,5 +112,19 @@ public class TagLayout extends ViewGroup {
     @Override
     public LayoutParams generateLayoutParams(AttributeSet attrs) {
         return new MarginLayoutParams(getContext(), attrs);
+    }
+
+    public void setAdapter(TagAdapter tagAdapter) {
+        if (tagAdapter == null) {
+            throw new NullPointerException("adapter is null");
+        }
+        removeAllViews();
+        mAdapter = null;
+        mAdapter = tagAdapter;
+        int count = mAdapter.getCount();
+        for (int i = 0; i < count; i++) {
+            View childView = mAdapter.getView(i, this);
+            addView(childView);
+        }
     }
 }
