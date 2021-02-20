@@ -57,7 +57,7 @@ public class TagLayout extends ViewGroup {
             //根据子View的宽度来处理换行
             if (lineWidth + (childView.getMeasuredWidth() + params.leftMargin + params.rightMargin) > width) {
                 //换行
-                height += childView.getMeasuredHeight() + params.topMargin + params.bottomMargin;
+                height += maxHeight;
                 lineWidth = childView.getMeasuredWidth() + params.leftMargin + params.rightMargin;
                 childViews = new ArrayList<>();
                 mChildViews.add(childViews);
@@ -82,6 +82,7 @@ public class TagLayout extends ViewGroup {
         int top = getPaddingTop();
         int right;
         int bottom;
+        int maxHeight = 0;
         for (List<View> childViews : mChildViews) {
             left = getPaddingLeft();
             for (View childView : childViews) {
@@ -95,9 +96,10 @@ public class TagLayout extends ViewGroup {
                 //摆放
                 childView.layout(left, childTop, right, bottom);
                 left += childView.getMeasuredWidth() + params.rightMargin;
+                int childHeight = childView.getMeasuredHeight() + params.topMargin + params.bottomMargin;
+                maxHeight = Math.max(childHeight, maxHeight);
             }
-            MarginLayoutParams params = (MarginLayoutParams) childViews.get(0).getLayoutParams();
-            top += childViews.get(0).getMeasuredHeight() + params.topMargin + params.bottomMargin;
+            top += maxHeight;
         }
     }
 
