@@ -1,12 +1,12 @@
 package com.darren.custom;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.darren.custom.databinding.ActivityMainBinding;
 import com.darren.custom.v1.V1Activity;
@@ -17,6 +17,7 @@ import com.darren.custom.v5.V5Activity;
 import com.darren.custom.v6.V6Activity;
 import com.darren.custom.v7.V7Activity;
 import com.darren.custom.v8.V8Activity;
+import com.darren.custom.v9.V9Activity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainBinding.starView.setOnClickListener(this);
         mainBinding.letterSideView.setOnClickListener(this);
         mainBinding.inflateTest.setOnClickListener(this);
+        mainBinding.tagView.setOnClickListener(this);
     }
 
     @Override
@@ -79,6 +81,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.inflate_test:
                 intent = new Intent(this, V8Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.tag_view:
+                intent = new Intent(this, V9Activity.class);
                 startActivity(intent);
                 break;
         }

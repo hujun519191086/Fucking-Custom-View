@@ -9,6 +9,7 @@
     <string name="star_view">自定义评分</string>
     <string name="letter_side_view">自定义字母选择</string>
     <string name="inflate_test">拦截测试</string>
+    <string name="tag_view">tag</string>
 
 
 </resources>

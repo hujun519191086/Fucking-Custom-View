@@ -8,64 +8,62 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/btn_custom_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/custom_view"
-            />
+            android:text="@string/custom_view" />
 
         <Button
             android:id="@+id/btn_arc_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/arc_view"
-            />
+            android:text="@string/arc_view" />
 
         <Button
             android:id="@+id/btn_track_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/track_view"
-            />
+            android:text="@string/track_view" />
 
         <Button
             android:id="@+id/btn_progress_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/progress_view"
-            />
+            android:text="@string/progress_view" />
 
         <Button
             android:id="@+id/shape_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/shape_view"
-            />
+            android:text="@string/shape_view" />
 
         <Button
             android:id="@+id/star_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/star_view"
-            />
+            android:text="@string/star_view" />
 
         <Button
             android:id="@+id/letter_side_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/letter_side_view"
-            />
+            android:text="@string/letter_side_view" />
 
         <Button
             android:id="@+id/inflate_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/inflate_test"
-            />
+            android:text="@string/inflate_test" />
+
+        <Button
+            android:id="@+id/tag_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tag_view" />
+
 
     </LinearLayout>
 </layout>
