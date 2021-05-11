@@ -50,32 +50,39 @@
 
     <declare-styleable name="ShapeView">
         <!--圆颜色-->
-        <attr name="circleColor" format="color"/>
+        <attr name="circleColor" format="color" />
         <!--正方形颜色-->
-        <attr name="squareColor" format="color"/>
+        <attr name="squareColor" format="color" />
         <!--三角形颜色-->
-        <attr name="triangleColor" format="color"/>
+        <attr name="triangleColor" format="color" />
 
     </declare-styleable>
 
     <declare-styleable name="StarView">
         <!--默认图片-->
-        <attr name="normal" format="reference"/>
+        <attr name="normal" format="reference" />
         <!--选中图片-->
-        <attr name="focus" format="reference"/>
+        <attr name="focus" format="reference" />
         <!--数量-->
-        <attr name="starNumber" format="integer"/>
+        <attr name="starNumber" format="integer" />
         <!--间隔-->
-        <attr name="starPadding" format="dimension"/>
+        <attr name="starPadding" format="dimension" />
     </declare-styleable>
 
     <declare-styleable name="LetterSideView">
         <!--默认颜色-->
-        <attr name="normalColor" format="color"/>
+        <attr name="normalColor" format="color" />
         <!--选中颜色-->
-        <attr name="focusColor" format="color"/>
+        <attr name="focusColor" format="color" />
         <!--文字大小-->
-        <attr name="letterSize" format="dimension"/>
+        <attr name="letterSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableView">
+        <!--显示的高度-->
+        <attr name="showHeight" format="dimension"></attr>
+        <!--显示的状态-->
+        <attr name="showState" format="boolean"></attr>
     </declare-styleable>
 
 </resources>

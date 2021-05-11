@@ -64,6 +64,12 @@
             android:layout_height="wrap_content"
             android:text="@string/tag_view" />
 
+        <Button
+            android:id="@+id/expandable_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expandable_view" />
+
 
     </LinearLayout>
 </layout>

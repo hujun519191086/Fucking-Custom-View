@@ -25,12 +25,14 @@ public class V9Activity extends AppCompatActivity {
 
     ActivityV9Binding v9Binding;
     List<String> mItems;
+    TagAdapter tagAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         v9Binding = DataBindingUtil.setContentView(this, R.layout.activity_v9);
         initData();
+        dataChange();
     }
 
     private void initData() {
@@ -43,7 +45,7 @@ public class V9Activity extends AppCompatActivity {
         mItems.add("zxcvbnm");
         mItems.add("zxcvbnm");
         mItems.add("zxcvbnm");
-        v9Binding.mTagLayout.setAdapter(new TagAdapter() {
+        tagAdapter = new TagAdapter() {
             @Override
             public int getCount() {
                 return mItems.size();
@@ -54,6 +56,24 @@ public class V9Activity extends AppCompatActivity {
                 TextView view = (TextView) LayoutInflater.from(V9Activity.this).inflate(R.layout.tag_item, viewGroup, false);
                 view.setText(mItems.get(position));
                 return view;
+            }
+        };
+        v9Binding.mTagLayout.setAdapter(tagAdapter);
+    }
+
+    private void dataChange() {
+        v9Binding.btnChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mItems.add("qwertyuiop");
+                mItems.add("asdfghjkl");
+                mItems.add("qwertyuiop");
+                mItems.add("zxcvbnm");
+                mItems.add("zxcvbnm");
+                mItems.add("zxcvbnm");
+                mItems.add("zxcvbnm");
+                mItems.add("zxcvbnm");
+                v9Binding.mTagLayout.setAdapter(tagAdapter);
             }
         });
     }

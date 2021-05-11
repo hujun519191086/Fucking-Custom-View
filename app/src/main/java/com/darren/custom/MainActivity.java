@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil;
 
 import com.darren.custom.databinding.ActivityMainBinding;
 import com.darren.custom.v1.V1Activity;
+import com.darren.custom.v10.V10Activity;
 import com.darren.custom.v2.V2Activity;
 import com.darren.custom.v3.V3Activity;
 import com.darren.custom.v4.V4Activity;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainBinding.letterSideView.setOnClickListener(this);
         mainBinding.inflateTest.setOnClickListener(this);
         mainBinding.tagView.setOnClickListener(this);
+        mainBinding.expandableView.setOnClickListener(this);
     }
 
     @Override
@@ -85,6 +87,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tag_view:
                 intent = new Intent(this, V9Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.expandable_view:
+                intent = new Intent(this, V10Activity.class);
                 startActivity(intent);
                 break;
         }

@@ -26,6 +26,7 @@
         <activity android:name=".v7.V7Activity" />
         <activity android:name=".v8.V8Activity" />
         <activity android:name=".v9.V9Activity" />
+        <activity android:name=".v10.V10Activity"/>
 
     </application>
 

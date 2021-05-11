@@ -14,7 +14,7 @@ import com.darren.custom.databinding.ActivityV8Binding;
  * date  12/16/20  10:15 PM
  * author  DarrenHang
  */
-public class V8Activity extends Activity {
+public class V8Activity extends V8BaseActivity {
 
     private String TAG = "V8Activity";
     ActivityV8Binding v8Binding;
@@ -24,7 +24,7 @@ public class V8Activity extends Activity {
         super.onCreate(savedInstanceState);
         initBinding();
         //Log-1
-        Log.d(TAG, "Button Height onCreate:" + v8Binding.btn.getMeasuredHeight());
+        /*Log.d(TAG, "Button Height onCreate:" + v8Binding.btn.getMeasuredHeight());
         v8Binding.btn.post(new Runnable() {
             @Override
             public void run() {
@@ -34,7 +34,7 @@ public class V8Activity extends Activity {
         });
         V8Test1 v8Test1 = new V8Test1(this);
         v8Test1.setTest(new V8Test2());
-        v8Test1.scheduleTraversals();
+        v8Test1.scheduleTraversals();*/
     }
 
     private void initBinding() {
@@ -45,6 +45,6 @@ public class V8Activity extends Activity {
     protected void onResume() {
         super.onResume();
         //Log-3
-        Log.d(TAG, "Button Height onResume:" + v8Binding.btn.getMeasuredHeight());
+        //Log.d(TAG, "Button Height onResume:" + v8Binding.btn.getMeasuredHeight());
     }
 }
