@@ -10,7 +10,7 @@
     <string name="letter_side_view">自定义字母选择</string>
     <string name="inflate_test">拦截测试</string>
     <string name="tag_view">tag</string>
-    <string name="expandable_view">expandable_view</string>
+    <string name="dispatch_view">⌚️事件分发</string>
 
 
 </resources>

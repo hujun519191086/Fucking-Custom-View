@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainBinding.letterSideView.setOnClickListener(this);
         mainBinding.inflateTest.setOnClickListener(this);
         mainBinding.tagView.setOnClickListener(this);
-        mainBinding.expandableView.setOnClickListener(this);
+        mainBinding.dispatchView.setOnClickListener(this);
     }
 
     @Override
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, V9Activity.class);
                 startActivity(intent);
                 break;
-            case R.id.expandable_view:
+            case R.id.dispatch_view:
                 intent = new Intent(this, V10Activity.class);
                 startActivity(intent);
                 break;
