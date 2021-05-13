@@ -30,3 +30,7 @@ Draw -> https://www.jianshu.com/p/b7ea037a0f4c
 
 # V9 自定义流式布局
 https://www.jianshu.com/p/f6d0e52acbde
+
+# V10 View 事件分发
+https://www.jianshu.com/p/2666bd2a1a68
+
