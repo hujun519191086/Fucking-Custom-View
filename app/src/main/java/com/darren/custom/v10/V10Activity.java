@@ -28,7 +28,7 @@ public class V10Activity extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 Log.d("V10Activity", "onTouch -> " + event.getAction());
-                return false;
+                return false;//true
             }
         });
 
