@@ -3,13 +3,35 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <com.darren.custom.v10.TouchView
             android:id="@+id/vw_touch"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@color/purple_700" />
+
+        <com.darren.custom.v10.TouchViewGroup
+            android:id="@+id/touch_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="btn1" />
+
+            <Button
+                android:id="@+id/btn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_1"
+                android:text="btn2" />
+
+
+        </com.darren.custom.v10.TouchViewGroup>
 
     </LinearLayout>
 

@@ -27,7 +27,7 @@ public class V10Activity extends AppCompatActivity {
         v10Binding.vwTouch.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                Log.d("V10Activity", "onTouch -> " + event.getAction());
+                Log.d("V10Activity", "onTouch -> TouchView" + event.getAction());
                 return false;//true
             }
         });
@@ -35,9 +35,34 @@ public class V10Activity extends AppCompatActivity {
         v10Binding.vwTouch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("V10Activity", "onClick");
+                Log.d("V10Activity", "TouchView onClick");
             }
         });
+
+
+        v10Binding.touchGroup.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                Log.d("V10Activity", "onTouch -> TouchGroup" + event.getAction());
+                return false;
+            }
+        });
+
+        v10Binding.btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("V10Activity", "btn1 onClick");
+            }
+        });
+
+        v10Binding.btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("V10Activity", "btn2 onClick");
+            }
+        });
+
+
     }
 
 
