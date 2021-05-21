@@ -85,4 +85,9 @@
         <attr name="showState" format="boolean"></attr>
     </declare-styleable>
 
+    <declare-styleable name="SlideMenu">
+        <!--右边显示大小-->
+        <attr name="rightPadding" format="dimension"></attr>
+    </declare-styleable>
+
 </resources>

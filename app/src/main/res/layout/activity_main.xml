@@ -70,6 +70,12 @@
             android:layout_height="wrap_content"
             android:text="@string/dispatch_view" />
 
+        <Button
+            android:id="@+id/slide_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/slide_view" />
+
 
     </LinearLayout>
 </layout>

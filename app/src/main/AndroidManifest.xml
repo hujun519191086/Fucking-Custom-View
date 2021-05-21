@@ -27,7 +27,7 @@
         <activity android:name=".v8.V8Activity" />
         <activity android:name=".v9.V9Activity" />
         <activity android:name=".v10.V10Activity"/>
-
+        <activity android:name=".v11.V11Activity"/>
     </application>
 
 </manifest>

@@ -11,6 +11,6 @@
     <string name="inflate_test">拦截测试</string>
     <string name="tag_view">tag</string>
     <string name="dispatch_view">️事件分发</string>
-
+    <string name="slide_view">QQ6.0侧滑</string>
 
 </resources>
