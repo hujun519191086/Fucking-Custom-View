@@ -47,7 +47,6 @@ public class SlideMenu extends HorizontalScrollView {
     public SlideMenu(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initMenu(context, attrs);
-        initMenu(context, attrs);
     }
 
     private void initMenu(Context context, AttributeSet attrs) {
@@ -118,13 +117,14 @@ public class SlideMenu extends HorizontalScrollView {
         layoutParams.width = getScreenWidth();
         //设置 layoutParams
         contentView.setLayoutParams(layoutParams);
-        container.addView(contentView, 1);
+        container.addView(contentView);
     }
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
         if (changed) {
+            //显示内容
             scrollTo(mMenuWidth, 0);
         }
     }
@@ -135,11 +135,13 @@ public class SlideMenu extends HorizontalScrollView {
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             if (mMenuIsOpen) {
+                //当往左滑动时关闭菜单
                 if (velocityX < 0) {
                     closeMenu();
                     return true;
                 }
             } else {
+                //当往右滑动时打开菜单
                 if (velocityX > 0) {
                     openMenu();
                     return true;
