@@ -36,3 +36,6 @@ View -> https://www.jianshu.com/p/2666bd2a1a68
 
 ViewGroup -> https://www.jianshu.com/p/9df8cb343f82
 
+# V11 自定义仿 QQ 侧滑
+https://www.jianshu.com/p/687ec64615e6
+
