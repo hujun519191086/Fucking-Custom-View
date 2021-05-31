@@ -39,3 +39,6 @@ ViewGroup -> https://www.jianshu.com/p/9df8cb343f82
 # V11 自定义仿 QQ 侧滑
 https://www.jianshu.com/p/687ec64615e6
 
+# V12 自定义可拖动回弹
+https://www.jianshu.com/p/96446d5d329e
+
