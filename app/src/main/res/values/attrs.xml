@@ -90,4 +90,13 @@
         <attr name="rightPadding" format="dimension"></attr>
     </declare-styleable>
 
+    <declare-styleable name="NineView">
+        <!--外圆颜色-->
+        <attr name="outDotColor" format="color"></attr>
+        <!--内圆颜色-->
+        <attr name="inDotColor" format="color"></attr>
+        <!--外圆大小-->
+        <attr name="dotWidth" format="dimension"></attr>
+    </declare-styleable>
+
 </resources>

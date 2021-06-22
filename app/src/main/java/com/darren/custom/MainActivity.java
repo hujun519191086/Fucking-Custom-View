@@ -13,6 +13,7 @@ import com.darren.custom.v1.V1Activity;
 import com.darren.custom.v10.V10Activity;
 import com.darren.custom.v11.V11Activity;
 import com.darren.custom.v12.V12Activity;
+import com.darren.custom.v13.V13Activity;
 import com.darren.custom.v2.V2Activity;
 import com.darren.custom.v3.V3Activity;
 import com.darren.custom.v4.V4Activity;
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainBinding.dispatchView.setOnClickListener(this);
         mainBinding.slideView.setOnClickListener(this);
         mainBinding.dragView.setOnClickListener(this);
+        mainBinding.nineView.setOnClickListener(this);
     }
 
     @Override
@@ -103,6 +105,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.drag_view:
                 intent = new Intent(this, V12Activity.class);
+                startActivity(intent);
+                break;
+            case R.id.nine_view:
+                intent = new Intent(this, V13Activity.class);
                 startActivity(intent);
                 break;
         }

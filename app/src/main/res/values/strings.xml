@@ -13,5 +13,6 @@
     <string name="dispatch_view">️事件分发</string>
     <string name="slide_view">QQ6.0侧滑</string>
     <string name="drag_view">拖动</string>
+    <string name="nine_view">九宫格</string>
 
 </resources>
