@@ -43,10 +43,10 @@ class NineView : View {
 
     private var isTouchPoint = false
     private var viewStatus = -1
-
     private var selectPoint = ArrayList<Point>()
-
     private val mPoints: Array<Array<Point?>> = Array(3) { Array<Point?>(3) { null } }
+
+    private var callBack: CallBack? = null
 
     constructor(context: Context) : this(context, null)
 
@@ -55,6 +55,10 @@ class NineView : View {
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         initAttr(context, attrs)
         initPaint()
+    }
+
+    fun setCallBack(callBack: CallBack){
+        this.callBack = callBack
     }
 
     //初始化属性
@@ -367,6 +371,11 @@ class NineView : View {
                     }
                     else -> {
                         showSelectRight()
+                        val sb = StringBuffer()
+                        selectPoint.forEach { point ->
+                            sb.append(point.index)
+                        }
+                        callBack?.password(sb.toString())
                     }
                 }
             }
@@ -436,4 +445,9 @@ class NineView : View {
             invalidate()
         }, 1000)
     }
+
+    interface CallBack{
+        fun password(pwd:String);
+    }
+
 }

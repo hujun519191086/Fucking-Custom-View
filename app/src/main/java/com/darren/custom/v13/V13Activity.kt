@@ -1,6 +1,7 @@
 package com.darren.custom.v13
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.darren.custom.R
@@ -17,6 +18,11 @@ class V13Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         v13Binding = DataBindingUtil.setContentView(this, R.layout.activity_v13)
+        v13Binding.nineView.setCallBack(object : NineView.CallBack {
+            override fun password(pwd: String) {
+                Log.d("response", pwd)
+            }
+        })
     }
 
 }
